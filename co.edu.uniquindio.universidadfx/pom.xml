@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                co.edu.uniquindio.universidadfx.universidadfx/co.edu.uniquindio.universidadfx.universidadfx.HelloApplication
+                                co.edu.uniquindio.universidadfx.universidadfx/co.edu.uniquindio.universidadfx.UniversidadApp
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
