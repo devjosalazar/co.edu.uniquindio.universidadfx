@@ -51,7 +51,7 @@ public class Universidad {
         return listaPersonas;
     }
 
-    public boolean crearEstudiante(String nombre,
+    public Estudiante crearEstudiante(String nombre,
                                    String apellido,
                                    int edad,
                                    double nota1,
@@ -71,9 +71,9 @@ public class Universidad {
             estudiante.setIdentificacion(identificacion);
             getListaEstudiantes().add(estudiante);
 
-            return true;
+            return estudiante;
         }else{
-            return false;
+            return null;
         }
     }
 
