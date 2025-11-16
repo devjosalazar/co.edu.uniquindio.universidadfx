@@ -103,7 +103,32 @@ public class Universidad {
     }
 
     private Docente obtenerDocente(String cedulaDocente) {
-        return null;
+        Docente docenteEncontrado = null;
+        for (Docente docente : getListaDocentes()) {
+            if(docente.getIdentificacion().equalsIgnoreCase(cedulaDocente)) {
+                docenteEncontrado = docente;
+            }
+        }
+
+        return docenteEncontrado;
+    }
+
+    public String consultarNotasPorEstudiante(String cedulaDocente) {
+        Docente docenteEncontrado = obtenerDocente(cedulaDocente);
+        String resultado = "";
+        if(docenteEncontrado != null) {
+            for (Estudiante estudiante : getListaEstudiantes()) {
+                double definitiva = docenteEncontrado.calcularDefinitivaEstudiante(
+                        estudiante.getNota1(),
+                        estudiante.getNota2(),
+                        estudiante.getNota3());
+                resultado = resultado + "Nota del estudiante: "+estudiante.getNombre()+ " es: "+definitiva+"\n";
+                definitiva =0.0;
+            }
+        }else{
+            resultado = "El Docente no existe";
+        }
+        return resultado;
     }
 }
 

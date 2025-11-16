@@ -37,6 +37,7 @@ public class DataUtil {
         docente.setApellido("Perez");
         docente.setEdad(40);
         docente.setCorreo("pedro@gmail.com");
+        docente.setIdentificacion("1095");
 
         universidad.getListaEstudiantes().add(estudiante1);
         universidad.getListaEstudiantes().add(estudiante2);

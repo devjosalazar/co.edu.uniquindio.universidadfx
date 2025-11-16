@@ -35,4 +35,8 @@ public class ModelFactory {
                 0.0,
                 identificacion);
     }
+
+    public String consultarNotasPorEstudiante(String cedulaDocente) {
+        return universidad.consultarNotasPorEstudiante(cedulaDocente);
+    }
 }
